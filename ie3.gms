@@ -1,3 +1,17 @@
+$inlinecom /* */
+
+/* Turn off the listing of the input file */
+$offlisting
+
+/* Turn off the listing and cross-reference of the symbols used */
+$offsymxref offsymlist
+
+option
+    limrow = 0,     /* equations listed per block */
+    limcol = 0,     /* variables listed per block */
+    solprint = off,     /* solver's solution output printed */
+    sysout = off;    
+
 Sets
 t   truck type /small, large/
 j   customers
@@ -118,14 +132,17 @@ cs3_max3(j, k, l) .. cs3(j, k, l) =g= c(l, "small") * s3(j, k, l);
 
 cost .. z =e= sum(j, i(j) * dw(j) * u(j))
 + sum(j, b1(j) * c(j, "large"))
-+ sum(j, s1(j) * c(j, "small")*100)
++ sum(j, s1(j) * c(j, "small"))
 + sum((j, k), cb2(j, k) + 250 * b2(j, k))
-+ sum((j, k), cs2(j, k)*10000 + 125 * s2(j, k))
++ sum((j, k), cs2(j, k) + 125 * s2(j, k))
 + sum((j, k, l),  cb3(j, k, l) + 500 * b3(j, k, l))
-+ sum((j, k, l), cs3(j, k, l)* 1000000 + 250 * s3(j, k, l));
++ sum((j, k, l), cs3(j, k, l) + 250 * s3(j, k, l));
+
+
 
 model transport / all /;
 
 solve transport using MIP minimizing z;
+
 
 Display i.l, d.l, b.l, s.l, b1.l, b2.l, b3.l, s1.l, s2.l, s3.l;

@@ -1,0 +1,162 @@
+GAMS 25.1.3  r4e34d435fbd Released Oct 30, 2018 WEX-WEI x86 64bit/MS Windows - 12/31/18 15:24:58 Page 1
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+C o m p i l a t i o n
+
+
+   2   
+   3  /* Turn off the listing of the input file */
+GAMS 25.1.3  r4e34d435fbd Released Oct 30, 2018 WEX-WEI x86 64bit/MS Windows - 12/31/18 15:24:58 Page 2
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+Include File Summary
+
+
+   SEQ   GLOBAL TYPE      PARENT   LOCAL  FILENAME
+
+     1        1 INPUT          0       0  D:\finals\ie310\datafiles\ie3.gms
+     2       19 INCLUDE        1      19  .D:\finals\ie310\datafiles\customers.txt
+     3       83 INCLUDE        1      27  .D:\finals\ie310\datafiles\demand-volume.txt
+     4      144 INCLUDE        1      32  .D:\finals\ie310\datafiles\demand-weight.txt
+     5      205 INCLUDE        1      37  .D:\finals\ie310\datafiles\clusterability.txt
+     6     3346 INCLUDE        1      42  .D:\finals\ie310\datafiles\trans_cost.txt
+     7     3409 INCLUDE        1      49  .D:\finals\ie310\datafiles\direct-shipment-cost.txt
+
+
+COMPILATION TIME     =        0.109 SECONDS      3 MB  25.1.3 r4e34d435fbd WEX-WEI
+GAMS 25.1.3  r4e34d435fbd Released Oct 30, 2018 WEX-WEI x86 64bit/MS Windows - 12/31/18 15:24:58 Page 3
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+Model Statistics    SOLVE transport Using MIP From line 3562
+
+
+MODEL STATISTICS
+
+BLOCKS OF EQUATIONS          25     SINGLE EQUATIONS    1,781,585
+BLOCKS OF VARIABLES          15     SINGLE VARIABLES      715,345
+NON ZERO ELEMENTS     4,610,705     DISCRETE VARIABLES    357,840
+
+
+GENERATION TIME      =        4.938 SECONDS    380 MB  25.1.3 r4e34d435fbd WEX-WEI
+
+
+EXECUTION TIME       =        4.938 SECONDS    380 MB  25.1.3 r4e34d435fbd WEX-WEI
+GAMS 25.1.3  r4e34d435fbd Released Oct 30, 2018 WEX-WEI x86 64bit/MS Windows - 12/31/18 15:24:58 Page 4
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+Solution Report     SOLVE transport Using MIP From line 3562
+
+
+               S O L V E      S U M M A R Y
+
+     MODEL   transport           OBJECTIVE  z
+     TYPE    MIP                 DIRECTION  MINIMIZE
+     SOLVER  CPLEX               FROM LINE  3562
+
+**** SOLVER STATUS     1 Normal Completion         
+**** MODEL STATUS      1 Optimal                   
+**** OBJECTIVE VALUE            15891.5220
+
+ RESOURCE USAGE, LIMIT          6.829      1000.000
+ ITERATION COUNT, LIMIT       121    2000000000
+
+IBM ILOG CPLEX   25.1.3 r4e34d435fbd Released Oct 30, 2018 WEI x86 64bit/MS Wi
+--- GAMS/Cplex licensed for continuous and discrete problems.
+Cplex 12.8.0.0
+
+Space for names approximately 105.12 Mb
+Use option 'names no' to turn use of names off
+MIP status(101): integer optimal solution
+Cplex Time: 2.78sec (det. 1795.44 ticks)
+Fixing integer variables, and solving final LP...
+Fixed MIP status(1): optimal
+Cplex Time: 1.52sec (det. 1226.67 ticks)
+Proven optimal solution.
+
+MIP Solution:        15891.522012    (121 iterations, 0 nodes)
+Final Solve:         15891.522012    (0 iterations)
+
+Best possible:       15891.522012
+Absolute gap:            0.000000
+Relative gap:            0.000000
+
+
+
+**** REPORT SUMMARY :        0     NONOPT
+                             0 INFEASIBLE
+                             0  UNBOUNDED
+GAMS 25.1.3  r4e34d435fbd Released Oct 30, 2018 WEX-WEI x86 64bit/MS Windows - 12/31/18 15:24:58 Page 5
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+E x e c u t i o n
+
+
+----   3565 VARIABLE i.L  
+
+39999031 1.000,    30002532 1.000,    30004701 1.000,    30002981 1.000,    30003646 1.000,    30003649 1.000,    30007192 1.000,    30008142 1.000,    30002991 1.000,    30008173 1.000,    30006465 1.000,    30003020 1.000,    30005146 1.000
+30007097 1.000,    30007008 1.000,    30002990 1.000,    30002962 1.000,    30005002 1.000,    30006719 1.000,    30001483 1.000,    30007348 1.000,    30005139 1.000,    30003018 1.000,    30007662 1.000,    30008728 1.000,    30008083 1.000
+30007169 1.000,    30006774 1.000,    30008666 1.000,    30008699 1.000,    30003818 1.000,    30008654 1.000,    30008348 1.000,    30002979 1.000,    30002141 1.000,    30000547 1.000,    30000414 1.000,    30006535 1.000,    30000077 1.000
+
+
+----   3565 VARIABLE d.L  
+
+30003002 1.000,    30002989 1.000,    30007858 1.000,    30003000 1.000,    30003813 1.000,    30003006 1.000,    30005483 1.000,    30004646 1.000,    30006671 1.000,    30008775 1.000,    30008347 1.000,    30008774 1.000,    30008624 1.000
+30007897 1.000,    30008444 1.000,    30002978 1.000,    30002985 1.000
+
+
+----   3565 VARIABLE b.L  
+
+                      ( ALL       0.000 )
+
+
+----   3565 VARIABLE s.L  
+
+30003002 1.000,    30002989 1.000,    30007858 1.000,    30003000 1.000,    30003813 1.000,    30003006 1.000,    30005483 1.000,    30004646 1.000,    30006671 1.000,    30008775 1.000,    30008347 1.000,    30008774 1.000,    30008624 1.000
+30007897 1.000,    30008444 1.000,    30002978 1.000,    30002985 1.000
+
+
+----   3565 VARIABLE b1.L  
+
+                      ( ALL       0.000 )
+
+
+----   3565 VARIABLE b2.L  
+
+                      ( ALL       0.000 )
+
+
+----   3565 VARIABLE b3.L  
+
+                      ( ALL       0.000 )
+
+
+----   3565 VARIABLE s1.L  
+
+                      ( ALL       0.000 )
+
+
+----   3565 VARIABLE s2.L  
+
+            30008347
+
+30004646       1.000
+
+
+----   3565 VARIABLE s3.L  
+
+                     30003002    30003000    30003006    30008444    30002985
+
+30002989.30007897                   1.000
+30006671.30003813                                           1.000
+30008774.30008775                               1.000
+30008624.30005483       1.000
+30002978.30007858                                                       1.000
+
+
+
+EXECUTION TIME       =        0.266 SECONDS    182 MB  25.1.3 r4e34d435fbd WEX-WEI
+
+
+USER: Eval License GAMS                              S181022/0001CO-GEN
+      INFORMS 2018 Phoenix                                      DC14505
+
+
+**** FILE SUMMARY
+
+Input      D:\finals\ie310\datafiles\ie3.gms
+Output     D:\finals\ie310\datafiles\ie3.lst
